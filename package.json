@@ -1,0 +1,1 @@
+{"author":"Lavish Gangwar","description":"A Vempire-themed markdown editor with a safe live preview, word count, reading time, and HTML export.","license":"MIT","name":"moonlit-md","private":true,"scripts":{"check":"node --check app.js","test":"node --test"},"type":"module","version":"1.0.0"}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>moonlit-md — Markdown editor with live preview</title>
+  <meta name="description" content="A Vempire-themed markdown editor with a safe live preview, word count, reading time and HTML export.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <svg class="bat-mark" viewBox="0 0 100 40" aria-hidden="true" focusable="false">
+        <path d="M50 12 C42 2 28 0 12 8 C20 12 20 17 15 22 C24 21 32 26 39 33 C43 26 47 23 50 27 C53 23 57 26 61 33 C68 26 76 21 85 22 C80 17 80 12 88 8 C72 0 58 2 50 12 Z" fill="currentColor"/>
+      </svg>
+      <h1>moonlit-md</h1>
+      <p class="tagline">Write by moonlight. Preview instantly.</p>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="panel glass" aria-labelledby="editor-heading">
+      <div class="panel-head">
+        <h2 id="editor-heading">Markdown</h2>
+        <div class="toolbar">
+          <button type="button" id="load-sample">Sample</button>
+          <button type="button" id="clear">Clear</button>
+        </div>
+      </div>
+      <label class="visually-hidden" for="editor">Markdown source</label>
+      <textarea id="editor" rows="22" spellcheck="false" placeholder="# Start writing…"></textarea>
+      <p id="stats" class="stats" aria-live="polite">0 words · 0 min read</p>
+    </section>
+
+    <section class="panel glass" aria-labelledby="preview-heading">
+      <div class="panel-head">
+        <h2 id="preview-heading">Preview</h2>
+        <div class="toolbar">
+          <button type="button" id="copy-html">Copy HTML</button>
+          <button type="button" id="download" class="primary">Download HTML</button>
+        </div>
+      </div>
+      <article id="preview" class="preview" aria-live="polite"></article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>moonlit-md · a Vempire project by Lavish Gangwar · raw HTML in your source is always escaped</p>
+  </footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
